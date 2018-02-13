@@ -1,0 +1,29 @@
+{
+  "name": "passthrough-object",
+  "version": "0.9.0",
+  "description": "pass through an object to get/set sub-object",
+  "main": "distrib/passthrough-object.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sylvain59650/passthrough-object.git"
+  },
+  "keywords": [
+    "getter",
+    "setter",
+    "passthrough"
+  ],
+  "author": "Sylvain Longepée",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Sylvain59650/passthrough-object/issues"
+  },
+  "homepage": "https://github.com/Sylvain59650/passthrough-object#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-uglify": "^3.0.0"
+  }
+}
