@@ -1,10 +1,11 @@
 {
   "name": "passthrough-object",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "pass through an object to get/set sub-object",
   "main": "distrib/passthrough-object.min.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "ava ./tests/*.js --verbose ",
+    "eslint": "eslint --fix './sources/*.js'"
   },
   "repository": {
     "type": "git",
@@ -22,8 +23,21 @@
   },
   "homepage": "https://github.com/Sylvain59650/passthrough-object#readme",
   "devDependencies": {
+    "ava": "^1.0.0-beta.3",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
     "gulp-uglify": "^3.0.0"
+  },
+  "ava": {
+    "files": [
+      "./tests/**/*.js"
+    ],
+    "sources": [
+      "./sources/*.{js,jsx}",
+      "!dist/**/*"
+    ]
+  },
+  "dependencies": {
+    "npm": "^5.8.0"
   }
 }

@@ -1,14 +1,39 @@
-var Path = require("../sources/passthrough-object.js");
+import { test } from "ava";
 
-var obj = { a: 1, b: { c: 3, d: 4, e: [{ f: '5', g: '6' }, { f: '7', g: '8' }, { f: '9', g: '10' }] } };
+import {get } from "../sources/passthrough-object.js";
 
-console.log("bd", Path.get(obj, "b.d", null));
-console.log("bef", Path.get(obj, "b.e.0.f", null));
-console.log("bef", Path.get(obj, "b.e[0].f", null));
-console.log("be", Path.get(obj, "b.e", null));
+test('foo', t => {
+  t.pass();
+});
 
-var be = Path.get(obj, "b.e", {});
-be.push({ f: "11", g: "12" });
 
-console.log(be);
-console.log(Path.get(obj, "b.e", {}));
+
+const obj = { a: 1, b: { c: 3, d: 4, e: [{ f: "5", g: "6" }, { f: "7", g: "8" }, { f: "9", g: "10" }] } };
+
+test("bd", t => {
+  t.deepEqual(get(obj, "b.d", null), 4);
+});
+
+test("bef", t => {
+  t.deepEqual(get(obj, "b.e.0.f", null), "5");
+});
+
+test("bef2", t => {
+  t.deepEqual(get(obj, "b.e[0].f", null), "5");
+});
+
+test("be", t => {
+  var a = get(obj, "b.e", null);
+  console.log(a);
+  t.deepEqual(get(obj, "b.e", null), [{ f: "5", g: "6" }, { f: "7", g: "8" }, { f: "9", g: "10" }]);
+});
+
+
+
+console.log(get(obj, "b.e", {}));
+
+test("null", t => {
+  var be = get(obj, "b.e", {});
+  be.push({ f: "11", g: "12" });
+  t.deepEqual(get(obj, "b.e", {}), [{ f: "5", g: "6" }, { f: "7", g: "8" }, { f: "9", g: "10" }, { f: "11", g: "12" }]);
+});
