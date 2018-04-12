@@ -1,8 +1,9 @@
 gulpfile.js
+package-lock.json
+eslint*
 node_modules/**
 .vscode/**
 docs/*
 tests/*
 sources/*
 ts/*
-package-lock.json
