@@ -7,6 +7,8 @@
 ![package](https://img.shields.io/github/package-json/v/Sylvain59650/passthrough-object.svg)
 ![dependencies](https://img.shields.io/david/Sylvain59650/passthrough-object.svg)
 ![minified](https://img.shields.io/bundlephobia/min/passthrough-object.svg)
+![linter](https://img.shields.io/badge/eslint-ok-blue.svg)
+![tests](https://img.shields.io/badge/tests-passing-brightgreen.svg)
 
 ![license](https://img.shields.io/npm/l/passthrough-object.svg)
 [![hits](http://hits.dwyl.com/Sylvain59650/passthrough-object.svg)](http://hits.dwyl.com/Sylvain59650/passthrough-object)
