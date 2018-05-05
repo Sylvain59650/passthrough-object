@@ -13,13 +13,11 @@
 # Methods
 ## get
 
-    Path.get(object, path, defaultValue)
+    Path.get(object, path, defaultValue);
     
-    object (Object):
-    an object
+    object (Object): an object
 
-    path (String):
-    path to pass through object. It's a string with names of properties separated with a dot.
+    path (String): path to pass through object. It's a string with names of properties separated with a dot.
     
     defaultValue (Object) : default value for sub-property if not found with path
       
@@ -61,3 +59,15 @@ Example
             { f: '9', g: '10' },
             { f: '11', g: '12' } ]
      */
+
+## set
+
+    Path.set(object, path, value);
+    
+    object (Object):
+    an object
+
+    path (String):
+    path to pass through object. It's a string with names of properties separated with a dot.
+    
+    value (Object) : value to set for sub-property 
