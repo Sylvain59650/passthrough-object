@@ -1,6 +1,6 @@
 {
   "name": "passthrough-object",
-  "version": "0.9.2",
+  "version": "0.9.3",
   "description": "pass through an object to get/set sub-object",
   "main": "distrib/passthrough-object.min.js",
   "scripts": {
@@ -38,6 +38,6 @@
     ]
   },
   "dependencies": {
-    "npm": "^5.8.0"
+    "object-polyfills": "0.8.0"
   }
 }

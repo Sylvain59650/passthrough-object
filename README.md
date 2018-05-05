@@ -22,7 +22,7 @@
 
 ## Availables operations
 - [get](https://github.com/Sylvain59650/passthrough-object/blob/master/docs/tutorial.md#get) : passes through an object to get its sub properties
-- no need more for modify sub property
+- [set](https://github.com/Sylvain59650/passthrough-object/blob/master/docs/tutorial.md#set) : passes through an object to set its sub properties
 
 ## Installation
 
@@ -41,3 +41,7 @@ or
 ### for browser
 
     <script src="node_modules/passthrough-object/distrib/passthrough-object.min.js"></script>
+
+for IE only, add this script
+
+    <script src="node_modules/object-polyfills/distrib/object-polyfills.min.js"></script>
