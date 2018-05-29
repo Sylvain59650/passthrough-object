@@ -1,6 +1,6 @@
 {
   "name": "passthrough-object",
-  "version": "0.9.3",
+  "version": "0.9.4",
   "description": "pass through an object to get/set sub-object",
   "main": "distrib/passthrough-object.min.js",
   "scripts": {
