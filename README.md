@@ -50,5 +50,4 @@ for IE only, add this script
 
 ## usage
 
-<a href="api.html">API</a>
-<a href="demo.html">Demo</a>
+<a href="https://sylvain59650.github.io/passthrough-object/">API & DEMO</a>
