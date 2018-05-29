@@ -21,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/Sylvain59650/passthrough-object/issues"
   },
-  "homepage": "https://github.com/Sylvain59650/passthrough-object#readme",
+  "homepage": "https://sylvain59650.github.io/passthrough-object/",
   "devDependencies": {
     "ava": "^1.0.0-beta.3",
     "gulp": "^3.9.1",
