@@ -1,0 +1,112 @@
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="3parts/iziToast.min.css?v=130c">
+  <script src="3parts/iziToast.min.js?v=130c" type="text/javascript"></script>
+  <link rel="stylesheet" type="text/css" href="demo.css" />
+</head>
+
+<body>
+  <style>
+    textarea {
+      width: 49%;
+      height: 100pt;
+    }
+  </style>
+  <script src="node_modules/passthrough-object/distrib/passthrough-object.min.js"></script>
+
+  <fieldset>
+    <legend>Source</legend>
+    <textarea id="src" placeholder="write your json object here">{"a":1,"b":{"c":2}}</textarea>
+    <textarea id="expression" placeholder="write your expression here">b</textarea>
+  </fieldset>
+
+  <fieldset>
+    <legend>Get</legend>
+    <button id="get">Get</button>
+    <textarea id="resultGet"></textarea>
+  </fieldset>
+
+  <fieldset>
+    <legend>Set</legend>
+    <textarea id="newValue" paceholder="write your new value here">{"c":4}</textarea>
+    <button id="set">Set</button>
+    <textarea id="resultSet"></textarea>
+  </fieldset>
+
+
+  <script>
+    var src = document.querySelector("#src");
+    var expression = document.querySelector("#expression");
+
+    var get = document.querySelector("#get");
+    var resultGet = document.querySelector("#resultGet");
+
+    var set = document.querySelector("#set");
+    var newValue = document.querySelector("#newValue");
+    var resultSet = document.querySelector("#resultSet");
+
+    function error(msg) {
+      iziToast.error({
+        title: "Error",
+        message: msg,
+        timeout: 3500,
+        backgrouncColor: "red"
+      });
+    }
+
+    function success(msg) {
+      iziToast.success({
+        title: "",
+        message: msg,
+        timeout: 3500,
+        backgrouncColor: "green"
+      });
+    }
+
+    get.addEventListener("click", function(e) {
+      try {
+        var text = src.value;
+        if (text === "") {
+          throw TypeError("json object empty");
+        }
+        var obj = JSON.parse(text);
+        var exp = expression.value;
+        if (exp === "") {
+          throw TypeError("expression empty");
+        }
+        var obj = JSON.parse(src.value);
+        var exp = expression.value;
+        var res = Path.get(obj, exp);
+        resultGet.innerHTML = JSON.stringify(res);
+        success("get successufully");
+      } catch (ex) {
+        error(ex.message);
+      }
+    });
+
+    set.addEventListener("click", function(e) {
+      try {
+        var text = src.value;
+        if (text === "") {
+          throw TypeError("json object empty");
+        }
+        var obj = JSON.parse(text);
+        var exp = expression.value;
+        if (exp === "") {
+          throw TypeError("expression empty");
+        }
+        var obj = JSON.parse(src.value);
+        var exp = expression.value;
+        var nv = JSON.parse(newValue.value);
+        var res = Path.set(obj, exp, nv);
+        resultSet.innerHTML = JSON.stringify(res);
+        success("set successufully");
+      } catch (ex) {
+        error(ex.message);
+      }
+    });
+  </script>
+</body>
+
+</html>
