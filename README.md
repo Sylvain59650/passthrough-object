@@ -21,6 +21,7 @@
 </div>
 
 ## Availables operations
+
 - [get](https://github.com/Sylvain59650/passthrough-object/blob/master/docs/tutorial.md#get) : passes through an object to get its sub properties
 - [set](https://github.com/Sylvain59650/passthrough-object/blob/master/docs/tutorial.md#set) : passes through an object to set its sub properties
 
@@ -36,6 +37,7 @@ or
 ## prerequisites
 
 ### for NodeJs
+
      var Path=require("passthrough-object");
 
 ### for browser
@@ -47,5 +49,6 @@ for IE only, add this script
     <script src="node_modules/object-polyfills/distrib/object-polyfills.min.js"></script>
 
 ## usage
+
 <a href="api.html">API</a>
 <a href="demo.html">Demo</a>
