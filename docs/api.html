@@ -1,0 +1,58 @@
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="demo.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <div class="breadcrumb">
+    <a href="https://www.npmjs.com/package/passthrough-object" title="NPM">
+      <img src="npm.png" height="32"></a>
+    <a href="https://github.com/Sylvain59650/passthrough-object" title="GitHub"><img src="https://github.com/favicon.ico" height="32" /></a>
+  </div>
+
+  <h1>passthrough-object</h1>
+
+  <h1> prerequisites</h1>
+
+  <h2> for NodeJs</h2>
+  <code>var Path=require("passthrough-object");</code>
+
+  <h2> for browser</h2>
+  <code><xmp><script src="node_modules/passthrough-object/distrib/passthrough-object.min.js"></script></xmp></code>
+  <h1> Methods</h1>
+  <h2> get</h2>
+  <code>
+  Path.get(object, path, defaultValue); 
+  
+  object (Object): an object 
+  path (String): path to pass through object. It's a string with names of properties separated with a dot. 
+  defaultValue (Object) : default value for sub-property if not found with path
+</code> Example
+  <code> var obj = { a: 1, b: { c: 3, d: 4, e: [{ f: '5', g: '6' }, { f: '7', g: '8' }, { f: '9', g: '10' }] } };
+     console.log(Path.get(obj, "b.d", null)); // 4 
+     console.log(Path.get(obj, "b.e.0.f", null)); // 5 
+     console.log(Path.get(obj, "b.e[0].f", null)); //5 
+     console.log(Path.get(obj, "b.e", null)); // [ { f: '5', g: '6' }, { f: '7', g: '8' }, { f: '9', g: '10' } ]
+</code>
+
+  <h1> no need more for modify</h1>
+
+  Example
+  <code>var be = Path.get(obj, "b.e", {}); 
+      be.push({ f: "11", g: "12" });
+       console.log(be); /* [ { f: '5', g: '6' }, { f: '7', g: '8' }, { f: '9', g: '10' }, { f: '11', g: '12' } ] */ 
+       console.log(Path.get(obj, "b.e", {})); /* [ { f: '5', g: '6' }, { f: '7', g: '8' }, { f: '9', g: '10' }, { f: '11', g: '12' } ] */
+</code>
+  <h2> set</h2>
+  <code>
+  Path.set(object, path, value); 
+  
+  object (Object): an object 
+  path (String): path to pass through object. It's a string with names of properties separated with a dot. 
+  value (Object) : value to set for sub-property
+</code>
+</body>
+
+</html>

@@ -47,10 +47,5 @@ for IE only, add this script
     <script src="node_modules/object-polyfills/distrib/object-polyfills.min.js"></script>
 
 ## usage
-<nav>
-    <ul>
-      <li><a href="api.html">API</a></li>
-      <li><span><a href="demo.html">Demo</a></span></li>
-
-    </ul>
-  </nav>
+<a href="api.html">API</a>
+<a href="demo.html">Demo</a>
