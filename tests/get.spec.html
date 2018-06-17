@@ -1,7 +1,7 @@
 <html>
 
 <body>
-  <script src="../sources/passthrough-object.js"></script>
+  <script src="../distrib/passthrough-object.min.js"></script>
   <script>
     var obj = {
       a: 1,
@@ -34,6 +34,28 @@
 
     console.log(JSON.stringify(be));
     console.log(JSON.stringify(Path.get(obj, "b.e", {})));
+
+
+
+    var b = {
+      a: [{
+        b: 10,
+        bb: [{
+          bbb: [1, 2]
+        }, {
+          bbb: 2
+        }]
+      }, {
+        b: 11
+      }],
+      c: [{
+        cc: 1
+      }, {
+        cc: 2
+      }]
+    };
+    var res = Path.get(b, "a[0].bb[0].bbb[1]]");
+    console.log(JSON.stringify(res));
   </script>
 </body>
 

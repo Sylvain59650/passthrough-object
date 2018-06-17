@@ -4,7 +4,7 @@
   "description": "pass through an object to get/set sub-object",
   "main": "distrib/passthrough-object.min.js",
   "scripts": {
-    "test": "ava ./tests/*.js --verbose || exit 0",
+    "test": "ava ./tests/*.ava.spec.js --verbose || exit 0",
     "eslint": "eslint --fix './sources/*.js'"
   },
   "repository": {
@@ -12,8 +12,8 @@
     "url": "git+https://github.com/Sylvain59650/passthrough-object.git"
   },
   "keywords": [
-    "getter",
-    "setter",
+    "getter","get",
+    "setter","set",
     "passthrough"
   ],
   "author": "Sylvain Longepée",
@@ -24,9 +24,15 @@
   "homepage": "https://sylvain59650.github.io/passthrough-object/",
   "devDependencies": {
     "ava": "^1.0.0-beta.3",
+    "babel-core": "^6.26.3",
+    "babel-plugin-remove-comments": "^2.0.0",
+    "babel-plugin-rename-umd-globals": "^1.0.0",
+    "babel-plugin-transform-es2015-modules-umd": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
     "gulp": "^3.9.1",
-    "gulp-concat": "^2.6.1",
-    "gulp-uglify": "^3.0.0"
+    "gulp-babel": "^7.0.1",
+    "gulp-concat": "^2.6.1"
   },
   "ava": {
     "files": [

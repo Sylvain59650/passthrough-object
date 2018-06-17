@@ -1,15 +1,17 @@
 ﻿const gulp = require("gulp");
 const concat = require("gulp-concat");
-const uglify = require("gulp-uglify");
-
+const babel = require("gulp-babel");
 
 gulp.task("passthrough-object.min.js", () => {
   return gulp.src([
       "sources/passthrough-object.js"
     ])
     .pipe(concat("passthrough-object.min.js"))
-    .pipe(uglify())
-    .on("error", function(err) { console.error(err.toString()); })
+    .pipe(babel({
+      presets: ["es2015"],
+      compact: false,
+      comments: false
+    }))
     .pipe(gulp.dest("./distrib"))
 });
 

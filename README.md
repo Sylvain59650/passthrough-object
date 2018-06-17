@@ -8,7 +8,8 @@
     <a target="_blank" title="dependencies graph" href="http://npm.anvaka.com/#/view/2d/passthrough-object"><img src="https://img.shields.io/badge/dependencies-graph-blue.svg" /></a>
     <img src="https://img.shields.io/bundlephobia/min/passthrough-object.svg" />
     <img src="https://img.shields.io/badge/eslint-ok-blue.svg" />
-    <a target="_blank" title="tests" href="https://sylvain59650.github.io/passthrough-object/"><img src="https://img.shields.io/badge/tests-passing-brightgreen.svg" /></a>
+    <a target="_blank" title="tests" href="https://sylvain59650.github.io/passthrough-object/"><img src="https://img.shields.io/badge/tests-passing-brightgreen.svg" /></a>  <a target="_blank" title="downloads" href="https://www.jsdelivr.com/package/npm/passthrough-object"><img src="https://data.jsdelivr.com/v1/package/npm/passthrough-object/badge" /></a>
+    <a target="_blank" title="cdn" href="https://cdn.jsdelivr.net/npm/passthrough-object/distrib/passthrough-object.min.js"><img src="https://img.shields.io/badge/cdn-jsdeliv-black.svg" /></a>
     <img src="https://img.shields.io/npm/l/passthrough-object.svg" />
     <img src="https://hits.dwyl.com/Sylvain59650/passthrough-object.svg" />
   </div>
@@ -22,8 +23,8 @@
 
 ## Availables operations
 
-- [get](https://github.com/Sylvain59650/passthrough-object/blob/master/docs/tutorial.md#get) : passes through an object to get its sub properties
-- [set](https://github.com/Sylvain59650/passthrough-object/blob/master/docs/tutorial.md#set) : passes through an object to set its sub properties
+- [get](https://sylvain59650.github.io/passthrough-object/api.html#get) : passes through an object to get its sub properties
+- [set](https://sylvain59650.github.io/passthrough-object/api.html#set) : passes through an object to set its sub properties
 
 ## Installation
 
@@ -33,6 +34,9 @@ or
 
     yarn add passthrough-object --save
 
+## Without installation
+
+    <script src="https://cdn.jsdelivr.net/npm/passthrough-object/distrib/passthrough-object.min.js"></script>
 
 ## prerequisites
 
