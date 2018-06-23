@@ -12,8 +12,10 @@
     "url": "git+https://github.com/Sylvain59650/passthrough-object.git"
   },
   "keywords": [
-    "getter","get",
-    "setter","set",
+    "getter",
+    "get",
+    "setter",
+    "set",
     "passthrough"
   ],
   "author": "Sylvain Longepée",
@@ -25,6 +27,7 @@
   "devDependencies": {
     "ava": "^1.0.0-beta.3",
     "babel-core": "^6.26.3",
+    "babel-plugin-minify-mangle-names": "^0.4.3",
     "babel-plugin-remove-comments": "^2.0.0",
     "babel-plugin-rename-umd-globals": "^1.0.0",
     "babel-plugin-transform-es2015-modules-umd": "^6.24.1",

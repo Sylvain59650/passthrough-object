@@ -9,8 +9,10 @@ gulp.task("passthrough-object.min.js", () => {
     .pipe(concat("passthrough-object.min.js"))
     .pipe(babel({
       presets: ["es2015"],
-      compact: false,
-      comments: false
+      compact: true,
+      minified: true,
+      comments: false,
+      plugins: ["minify-mangle-names"]
     }))
     .pipe(gulp.dest("./distrib"))
 });
@@ -21,10 +23,13 @@ gulp.task("demo", () => {
       "sources/passthrough-object.js"
     ])
     .pipe(concat("passthrough-object.min.js"))
-    .pipe(gulp.dest("./docs/node_modules/passthrough-object/distrib/"))
+    .pipe(babel({
+      presets: ["es2015"],
+      minified: true,
+      comments: false,
+      plugins: ["minify-mangle-names"]
+    }))
+    .pipe(gulp.dest("./docs/demo/modules/passthrough-object/distrib/"))
 });
 
 gulp.task("default", ["passthrough-object.min.js", "demo"]);
-
-
-gulp.task("all", ["default"]);

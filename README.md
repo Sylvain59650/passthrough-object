@@ -36,7 +36,7 @@ or
 
 ## Without installation
 
-    <script src="https://cdn.jsdelivr.net/npm/passthrough-object/distrib/passthrough-object.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/passthrough-object/distrib/passthrough-object.min.js" type="module"></script>
 
 ## prerequisites
 
@@ -46,7 +46,7 @@ or
 
 ### for browser
 
-    <script src="node_modules/passthrough-object/distrib/passthrough-object.min.js"></script>
+    <script src="node_modules/passthrough-object/distrib/passthrough-object.min.js" type="module"></script>
 
 for IE only, add this script
 
