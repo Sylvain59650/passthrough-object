@@ -1,6 +1,6 @@
 {
   "name": "passthrough-object",
-  "version": "0.9.4",
+  "version": "0.9.5",
   "description": "pass through an object to get/set sub-object",
   "main": "distrib/passthrough-object.min.js",
   "scripts": {
@@ -18,7 +18,14 @@
     "set",
     "passthrough"
   ],
-  "author": "Sylvain Longepée",
+  ,
+  "author": "sylvain59",
+  "maintainers": [
+    {
+      "name": "sylvain59",
+      "email": "slongepee@laposte.net"
+    }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Sylvain59650/passthrough-object/issues"
